@@ -3,11 +3,11 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 
 const roboto = Roboto({
-  weight: ['400', '700'],
-  subsets: ['latin'],
-  style: 'normal',
-  display: 'swap',
-})
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  style: "normal",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Apri - Cerrajería 24 horas",
