@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "Apri - Cerrajería 24 horas",
   description:
     "Servicio de cerrajería rápido y confiable. Llegamos en minutos para ayudarte a entrar en tu casa o coche.",
+    icons: {
+      icon: "/icon.ico",
+    },
 };
 
 export default function RootLayout({
