@@ -1,113 +1,157 @@
+import DoorClosedIcon from "@/components/icons/DoorClosed";
+import MountainIcon from "@/components/icons/Mountain";
+import SmartphoneIcon from "@/components/icons/Smartphone";
 import Image from "next/image";
+import Link from "next/link";
 
-export default function Home() {
+export default function Component() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="flex flex-col min-h-[100dvh] bg-f2f2f2 text-black">
+      <header className="px-4 lg:px-6 h-14 flex items-center bg-slate-400">
+        <Link className="flex items-center justify-center" href="#">
+          <Image
+            alt="Cerrajería 24 horas"
+            height="50"
+            src="/apri.png"
+            width="50"
+          />
+        </Link>
+        <nav className="ml-auto flex gap-4 sm:gap-6">
+          <Link
+            className="text-sm font-medium hover:underline underline-offset-4"
+            href="#servicios"
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+            Servicios
+          </Link>
+          <Link
+            className="text-sm font-medium hover:underline underline-offset-4"
+            href="#"
+          >
+            Sobre nosotros
+          </Link>
+          <Link
+            className="text-sm font-medium hover:underline underline-offset-4"
+            href="#"
+          >
+            Contacto
+          </Link>
+        </nav>
+      </header>
+      <main className="flex-1">
+        <section className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container space-y-4 px-4 text-center md:px-6 lg:space-y-10 lg:px-10">
+            <div className="space-y-2">
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                Cerrajería 24 horas
+              </h1>
+              <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                Servicio de cerrajería rápido y confiable. Llegamos en minutos
+                para ayudarte a entrar en tu casa o coche.
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <div className="grid max-w-sm items-start gap-2">
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+                <Link
+                  className="inline-flex h-10 items-center justify-center rounded-md bg-green-400 px-4 text-sm font-medium text-gray-50 shadow gap-2 transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-green-400 dark:text-gray-900 dark:hover:bg-green-50/90 dark:focus-visible:ring-gray-300"
+                  href="#"
+                >
+                  <SmartphoneIcon className="h-4 w-4" />
+                  2615188484
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="w-full py-12 md:py-24 lg:py-32 border-t" id="servicios">
+          <div className="container grid items-center gap-10 px-4 md:px-6">
+            <div className="space-y-2">
+              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
+                Nuestros servicios
+              </h2>
+              <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                Ofrecemos una variedad de servicios de cerrajería, desde abrir
+                cerraduras hasta instalar sistemas de seguridad.
+              </p>
+            </div>
+            <div className="mx-auto grid max-w-5xl items-start gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+              <div className="grid gap-6 relative group">
+                <div className="grid gap-1">
+                  <h3 className="text-xl font-bold">Apertura Casa</h3>
+                  <p className="text-sm">
+                    Servicio de apertura de casas las 24 horas.
+                  </p>
+                </div>
+                <Image
+                  alt="Apertura Casa"
+                  className="mx-auto overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
+                  height="310"
+                  src="/ap_casa.jpeg"
+                  width="550"
+                />
+              </div>
+              <div className="grid gap-6 relative group">
+                <div className="grid gap-1">
+                  <h3 className="text-xl font-bold">Apertura Auto</h3>
+                  <p className="text-sm">
+                    Servicio de apertura de autos las 24 horas.
+                  </p>
+                </div>
+                <Image
+                  alt="Apertura Auto"
+                  className="mx-auto overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
+                  height="310"
+                  src="/ap_auto.jpeg"
+                  width="550"
+                />
+              </div>
+              <div className="grid gap-6 relative group">
+                <div className="grid gap-1">
+                  <h3 className="text-xl font-bold">Destrabe auto & Casa</h3>
+                  <p className="text-sm">
+                    Servicio de destrabe de autos y casas.
+                  </p>
+                </div>
+                <Image
+                  alt="Destrabe auto & Casa"
+                  className="mx-auto overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
+                  height="310"
+                  src="/destrabe.jpeg"
+                  width="550"
+                />
+              </div>
+              <div className="grid gap-6 relative group">
+                <div className="grid gap-1">
+                  <h3 className="text-xl font-bold">Cambio de Combinacion</h3>
+                  <p className="text-sm">
+                    Servicio de cambio de combinación de cerraduras.
+                  </p>
+                </div>
+                <Image
+                  alt="Cambio de Combinacion"
+                  className="mx-auto overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
+                  height="310"
+                  src="/apri.png"
+                  width="550"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+        <p className="text-xs text-gray-500 dark:text-gray-400">
+          © 2024 Cerrajería 24 horas. Todos los derechos reservados.
+        </p>
+        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
+          <Link className="text-xs hover:underline underline-offset-4" href="#">
+            Términos del servicio
+          </Link>
+          <Link className="text-xs hover:underline underline-offset-4" href="#">
+            Privacidad
+          </Link>
+        </nav>
+      </footer>
+    </div>
   );
 }
