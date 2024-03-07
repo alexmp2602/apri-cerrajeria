@@ -1,5 +1,3 @@
-import DoorClosedIcon from "@/components/icons/DoorClosed";
-import MountainIcon from "@/components/icons/Mountain";
 import SmartphoneIcon from "@/components/icons/Smartphone";
 import Image from "next/image";
 import Link from "next/link";
