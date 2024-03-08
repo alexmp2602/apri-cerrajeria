@@ -8,6 +8,7 @@ import Cta from "@/components/Cta";
 import Nosotros from "@/components/Nosotros";
 import Location from "@/components/Location";
 import Footer from "@/components/Footer";
+import Reviews from "@/components/Reviews";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
         <Services />
         <Cta />
         <Nosotros />
-        <Location />
+        <Reviews />
       </main>
       <Footer />
       <div className="fixed bottom-4 right-4">

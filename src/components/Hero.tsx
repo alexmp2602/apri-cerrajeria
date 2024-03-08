@@ -37,7 +37,7 @@ export default function Hero() {
             Mendoza
           </p>
           <Link
-          className="inline-flex h-10 items-center justify-center rounded-md bg-gray-800 dark:bg-gray-800 p-4 text-sm font-medium text-gray-50 shadow gap-2 transition-colors hover:bg-gray-800/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:text-gray-50 dark:hover:bg-gray-50/90 dark:hover:text-gray-800 dark:focus-visible:ring-gray-300"
+          className="inline-flex h-10 items-center justify-center rounded-md bg-yellow-300 dark:bg-yellow-400 p-4 text-sm font-medium text-gray-800 dark:text-gray-800 shadow gap-2 transition-colors hover:bg-gray-800/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:hover:bg-gray-50/90 dark:hover:text-gray-800 dark:focus-visible:ring-gray-300"
           href="tel:+542615188484"
         >
           <SmartphoneIcone />
