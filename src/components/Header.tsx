@@ -47,6 +47,9 @@ export default function Header() {
         <Link href="#servicios" className="text-sm hover:underline">
           Servicios
         </Link>
+        <Link href="#nosotros" className="text-sm hover:underline">
+          Nosotros
+        </Link>
         <Link href="#contacto" className="text-sm hover:underline">
           Contacto
         </Link>
