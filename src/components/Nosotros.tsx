@@ -14,7 +14,7 @@ export default function Nosotros() {
   }, []);
 
   return (
-    <section id="nosotros" className="py-6">
+    <section id="nosotros" className="py-6 lg:py-12">
       <div className="container mx-auto px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 place-content-center text-center">
           <div>
