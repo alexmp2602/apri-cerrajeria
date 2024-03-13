@@ -41,7 +41,10 @@ export default function Footer() {
               Cerrajería Apri <br /> De Walter Troncoso
             </p>
           </div>
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
+          <Link
+            href="/politicas-de-privacidad"
+            className="text-xs hover:underline underline-offset-4"
+          >
             Políticas de Privacidad
           </Link>
         </nav>
