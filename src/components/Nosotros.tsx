@@ -16,33 +16,20 @@ export default function Nosotros() {
   return (
     <section id="nosotros" className="py-6 lg:py-12">
       <div className="container mx-auto px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 place-content-center text-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 place-content-center text-center">
           <div>
             <h2 className="text-3xl font-semibold mb-4">¡Nosotros!</h2>
-            <p className="text-gray-600 mb-4 text-pretty">
-              ¡En Cerrajería Apri somos tus expertos confiables en cerrajería en
-              Mendoza!
+            <p className="text-gray-600 mb-2 text-pretty">
+              En Cerrajería Apri, somos tus expertos confiables en Mendoza para
+              servicios de cerrajería en automóviles, hogares y seguridad.
             </p>
-            <p className="text-gray-600 mb-4 text-pretty">
-              Ofrecemos servicios especializados para automóviles, hogares y
-              sistemas de seguridad, con la garantía de calidad y precios
-              accesibles. Con años de experiencia y habilidades técnicas
-              avanzadas, estamos aquí para ayudarte en cualquier momento del día
-              o la noche.
-            </p>
-            <p className="text-gray-600 mb-4 text-pretty">
-              Nuestro compromiso con la calidad, la confianza y la asequibilidad
-              nos distingue como la elección preferida para resolver tus
-              necesidades de cerrajería. Construimos relaciones basadas en la
-              honestidad y el trato amable, valores que son fundamentales para
-              nuestra filosofía y que nos definen como empresa.
+            <p className="text-gray-600 mb-2 text-pretty">
+              Con años de experiencia, ofrecemos calidad, confianza y precios
+              accesibles.
             </p>
           </div>
           <div>
             <div className="flex flex-col items-center">
-              <h2 className="text-3xl font-semibold mb-6">
-                Trabajos realizados
-              </h2>
               <div className="bg-white rounded-lg shadow-md p-6">
                 {plugin && (
                   <Carousel
@@ -58,7 +45,7 @@ export default function Nosotros() {
                             alt="Nosotros"
                             className="w-full h-auto rounded-lg shadow-lg"
                             height={400}
-                            src="/ap_auto.jpeg"
+                            src="/ntros.jpg"
                             style={{
                               aspectRatio: "600/400",
                               objectFit: "cover",
@@ -71,7 +58,7 @@ export default function Nosotros() {
                             alt="Nosotros"
                             className="w-full h-auto rounded-lg shadow-lg"
                             height={400}
-                            src="/ap_casa.jpeg"
+                            src="/tr1.jpg"
                             style={{
                               aspectRatio: "600/400",
                               objectFit: "cover",
@@ -84,7 +71,33 @@ export default function Nosotros() {
                             alt="Nosotros"
                             className="w-full h-auto rounded-lg shadow-lg"
                             height={400}
-                            src="/destrabe.jpeg"
+                            src="/tr2.jpg"
+                            style={{
+                              aspectRatio: "600/400",
+                              objectFit: "cover",
+                            }}
+                            width={600}
+                          />
+                        </CarouselItem>
+                        <CarouselItem>
+                          <Image
+                            alt="Nosotros"
+                            className="w-full h-auto rounded-lg shadow-lg"
+                            height={400}
+                            src="/tr3.jpg"
+                            style={{
+                              aspectRatio: "600/400",
+                              objectFit: "cover",
+                            }}
+                            width={600}
+                          />
+                        </CarouselItem>
+                        <CarouselItem>
+                          <Image
+                            alt="Nosotros"
+                            className="w-full h-auto rounded-lg shadow-lg"
+                            height={400}
+                            src="/tr4.jpg"
                             style={{
                               aspectRatio: "600/400",
                               objectFit: "cover",
