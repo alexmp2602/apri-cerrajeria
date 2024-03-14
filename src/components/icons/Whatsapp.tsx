@@ -1,5 +1,3 @@
-"use client"
-
 import React, { useState } from 'react';
 
 interface WhatsappIconProps extends React.SVGProps<SVGSVGElement> {
@@ -15,6 +13,10 @@ const WhatsappIcon: React.FC<WhatsappIconProps> = ({ className, ...rest }) => {
 
   const handleMouseLeave = () => {
     setIsHovered(false);
+  };
+
+  const handleTouchStart = () => {
+    setIsHovered(true);
   };
 
   const handleWhatsAppClick = (e: React.MouseEvent<SVGSVGElement>) => {
@@ -35,6 +37,7 @@ const WhatsappIcon: React.FC<WhatsappIconProps> = ({ className, ...rest }) => {
       className={`text-white ${className}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onTouchStart={handleTouchStart}
       onClick={handleWhatsAppClick}
       {...rest}
     >
