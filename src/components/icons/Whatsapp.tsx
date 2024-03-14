@@ -7,7 +7,7 @@ interface WhatsappIconProps extends React.SVGProps<SVGSVGElement> {
 }
 
 const WhatsappIcon: React.FC<WhatsappIconProps> = ({ className, ...rest }) => {
-  const handleWhatsAppClick = (e: React.MouseEvent<SVGSVGElement>) => {
+  const handleWhatsAppClick = (e: React.MouseEvent<SVGSVGElement> | React.TouchEvent<SVGSVGElement>) => {
     e.preventDefault();
     const whatsappUrl = 'https://wa.me/+542615188484?text=¡Hola!%20Me%20gustaría%20saber%20más%20sobre%20sus%20servicios.';
     window.open(whatsappUrl, '_blank');
@@ -23,7 +23,8 @@ const WhatsappIcon: React.FC<WhatsappIconProps> = ({ className, ...rest }) => {
       stroke="currentColor"
       fill="green"
       className={`text-white ${className}`}
-      onClick={handleWhatsAppClick}
+      onMouseDown={handleWhatsAppClick}
+      onTouchStart={handleWhatsAppClick}
       {...rest}
     >
       <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
