@@ -16,7 +16,7 @@ export default function Nosotros() {
   return (
     <section id="nosotros" className="py-6 lg:py-12">
       <div className="container mx-auto px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 place-content-center text-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 place-content-center items-center text-center">
           <div>
             <h2 className="text-3xl font-semibold mb-4">¡Nosotros!</h2>
             <p className="text-gray-600 mb-2 text-pretty">
