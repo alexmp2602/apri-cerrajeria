@@ -1,8 +1,14 @@
+"use client"
+
 import Image from "next/image";
-import Link from "next/link";
 import SmartphoneIcone from "./icons/Smartphone";
 
 export default function Hero() {
+  const handleContactClick = () => {
+    const phoneNumber = "+542615188484";
+    window.open(`tel:${phoneNumber}`);
+  };
+
   return (
     <section
       id="banner"
@@ -14,7 +20,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black opacity-80"></div>
       <div className="container mx-auto relative flex flex-col gap-4 p-4 text-center md:px-6 lg:space-y-10 lg:px-10">
         <div className="flex flex-col gap-8 items-center justify-center">
-          <div className="bg-white w-60 h-60 rounded-full flex  items-center justify-center">
+          <div className="bg-white w-60 h-60 rounded-full flex items-center justify-center">
             <Image
               alt="Cerrajería 24 horas"
               height={180}
@@ -36,14 +42,13 @@ export default function Hero() {
             Siempre a dispocisión para las soluciones que necesites en todo
             Mendoza
           </p>
-          <Link
-          className="inline-flex h-10 items-center justify-center rounded-md bg-yellow-300 dark:bg-yellow-400 p-4 text-sm font-medium text-gray-800 dark:text-gray-800 shadow gap-2 transition-colors hover:bg-gray-800/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:hover:bg-gray-50/90 dark:hover:text-gray-800 dark:focus-visible:ring-gray-300"
-          href="tel:+542615188484"
-          replace
-        >
-          <SmartphoneIcone />
-          ¡Contáctanos ahora!
-        </Link>
+          <button
+            className="inline-flex h-10 items-center justify-center rounded-md bg-yellow-300 dark:bg-yellow-400 p-4 text-sm font-medium text-gray-800 dark:text-gray-800 shadow gap-2 transition-colors hover:bg-gray-800/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:hover:bg-gray-50/90 dark:hover:text-gray-800 dark:focus-visible:ring-gray-300"
+            onClick={handleContactClick}
+          >
+            <SmartphoneIcone />
+            ¡Contáctanos ahora!
+          </button>
         </div>
       </div>
     </section>

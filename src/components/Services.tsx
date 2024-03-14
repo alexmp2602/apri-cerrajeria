@@ -1,6 +1,6 @@
-import { link } from "fs";
+"use client"
+
 import Image from "next/image";
-import Link from "next/link";
 
 // Datos de servicios
 const servicios = [
@@ -8,29 +8,35 @@ const servicios = [
     title: "Apertura de Casa",
     description: "Servicio de apertura de casas las 24 horas.",
     image: "/ap_casa.jpeg",
-    link: "https://api.whatsapp.com/send?phone=+5492615188484&text=Hola%20me%20gustar%C3%ADa%20solicitar%20el%20servicio%20de%20*Apertura%20Casa*.",
+    link: "apertura-casa",
   },
   {
     title: "Apertura de Auto",
     description: "Servicio de apertura de autos las 24 horas.",
     image: "/ap_auto.jpeg",
-    link: "https://api.whatsapp.com/send?phone=+5492615188484&text=Hola%20me%20gustar%C3%ADa%20solicitar%20el%20servicio%20de%20*Apertura%20Auto*.",
+    link: "apertura-auto",
   },
   {
     title: "Destrabe de autos y casas",
     description: "Servicio de destrabe de autos y casas.",
     image: "/destrabe.jpeg",
-    link: "https://api.whatsapp.com/send?phone=+5492615188484&text=Hola%20me%20gustar%C3%ADa%20solicitar%20el%20servicio%20de%20*Destrabe*.",
+    link: "destrabe",
   },
   {
     title: "Cambio de Combinación",
     description: "Servicio de cambio de combinación de cerraduras.",
     image: "/apri.png",
-    link: "https://api.whatsapp.com/send?phone=+5492615188484&text=Hola%20me%20gustar%C3%ADa%20solicitar%20el%20servicio%20de%20*Cambio%20de%20Combinaci%C3%B3n*.",
+    link: "cambio-combinacion",
   },
 ];
 
 export default function Services() {
+  const handleWhatsAppClick = (e: React.MouseEvent<HTMLButtonElement>, link: string) => {
+    e.preventDefault();
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=+5492615188484&text=Hola%20me%20gustar%C3%ADa%20solicitar%20el%20servicio%20de%20*${link}*.`;
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <section id="servicios" className="w-full py-6 lg:py-12 border-t">
       <div className="container mx-auto grid items-center px-4 md:px-6">
@@ -50,7 +56,10 @@ export default function Services() {
               key={servicio.title}
               className="bg-white rounded-lg shadow-md p-6"
             >
-              <Link href={servicio.link}>
+              <button
+                onClick={(e) => handleWhatsAppClick(e, servicio.link)}
+                className="flex flex-col items-center justify-center cursor-pointer"
+              >
                 <Image
                   alt={servicio.title}
                   className="mx-auto rounded-lg mb-4"
@@ -60,7 +69,7 @@ export default function Services() {
                 />
                 <h3 className="text-lg font-semibold mb-2">{servicio.title}</h3>
                 <p className="text-sm text-gray-600">{servicio.description}</p>
-              </Link>
+              </button>
             </div>
           ))}
         </div>
