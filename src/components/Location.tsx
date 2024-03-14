@@ -5,7 +5,7 @@ import ClockIcon from "./icons/Clock";
 export default function Location() {
   return (
     <section className="py-6 lg:py-12">
-      <div className="container px-8 md:px-12 flex flex-col md:flex-row items-start gap-6">
+      <div className="container mx-auto px-8 md:px-12 flex flex-col md:flex-row items-start gap-6">
         <div className="flex flex-col justify-center items-center gap-2">
           <div className="flex gap-2 items-center">
             <LocationIcon />

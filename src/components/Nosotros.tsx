@@ -47,8 +47,7 @@ export default function Nosotros() {
                             height={400}
                             src="/ntros.jpg"
                             style={{
-                              aspectRatio: "600/400",
-                              objectFit: "cover",
+                              aspectRatio: "600/600",
                             }}
                             width={600}
                           />
@@ -60,8 +59,7 @@ export default function Nosotros() {
                             height={400}
                             src="/tr1.jpg"
                             style={{
-                              aspectRatio: "600/400",
-                              objectFit: "cover",
+                              aspectRatio: "600/600",
                             }}
                             width={600}
                           />
@@ -73,8 +71,7 @@ export default function Nosotros() {
                             height={400}
                             src="/tr2.jpg"
                             style={{
-                              aspectRatio: "600/400",
-                              objectFit: "cover",
+                              aspectRatio: "600/600",
                             }}
                             width={600}
                           />
@@ -86,8 +83,7 @@ export default function Nosotros() {
                             height={400}
                             src="/tr3.jpg"
                             style={{
-                              aspectRatio: "600/400",
-                              objectFit: "cover",
+                              aspectRatio: "600/600",
                             }}
                             width={600}
                           />
@@ -99,8 +95,7 @@ export default function Nosotros() {
                             height={400}
                             src="/tr4.jpg"
                             style={{
-                              aspectRatio: "600/400",
-                              objectFit: "cover",
+                              aspectRatio: "600/600",
                             }}
                             width={600}
                           />

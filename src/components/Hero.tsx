@@ -12,7 +12,7 @@ export default function Hero() {
       }}
     >
       <div className="absolute inset-0 bg-black opacity-80"></div>
-      <div className="container relative flex flex-col gap-4 p-4 text-center md:px-6 lg:space-y-10 lg:px-10">
+      <div className="container mx-auto relative flex flex-col gap-4 p-4 text-center md:px-6 lg:space-y-10 lg:px-10">
         <div className="flex flex-col gap-8 items-center justify-center">
           <div className="bg-white w-60 h-60 rounded-full flex  items-center justify-center">
             <Image

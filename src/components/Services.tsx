@@ -33,7 +33,7 @@ const servicios = [
 export default function Services() {
   return (
     <section id="servicios" className="w-full py-6 lg:py-12 border-t">
-      <div className="container grid items-center px-4 md:px-6">
+      <div className="container mx-auto grid items-center px-4 md:px-6">
         <div className="flex flex-col items-center space-y-4 py-4">
           <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
             Servicios Profesionales
