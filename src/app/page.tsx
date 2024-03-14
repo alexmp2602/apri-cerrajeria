@@ -26,6 +26,7 @@ export default function Home() {
       <div className="fixed bottom-4 right-4">
         <Link
           href="https://wa.me/+542615188484?text=¡Hola!%20Me%20gustaría%20saber%20más%20sobre%20sus%20servicios."
+          replace
           className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-600 text-white shadow-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-800"
         >
           <WhatsappIcon className="h-6 w-6" />
