@@ -1,12 +1,22 @@
 "use client"
 
-import React from 'react';
+import React, { useState } from 'react';
 
 interface WhatsappIconProps extends React.SVGProps<SVGSVGElement> {
   className?: string;
 }
 
 const WhatsappIcon: React.FC<WhatsappIconProps> = ({ className, ...rest }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   const handleWhatsAppClick = (e: React.MouseEvent<SVGSVGElement>) => {
     e.preventDefault();
     const whatsappUrl = 'https://wa.me/+542615188484?text=¡Hola!%20Me%20gustaría%20saber%20más%20sobre%20sus%20servicios.';
@@ -21,8 +31,10 @@ const WhatsappIcon: React.FC<WhatsappIconProps> = ({ className, ...rest }) => {
       viewBox="0 0 24 24"
       strokeWidth="1.5"
       stroke="currentColor"
-      fill="green"
-      className={`text-white hover:text-gray-600 ${className}`}
+      fill={isHovered ? 'gray' : 'green'}
+      className={`text-white ${className}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       onClick={handleWhatsAppClick}
       {...rest}
     >
