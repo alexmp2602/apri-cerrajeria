@@ -100,6 +100,42 @@ export default function Nosotros() {
                             width={600}
                           />
                         </CarouselItem>
+                        <CarouselItem>
+                          <Image
+                            alt="Nosotros"
+                            className="w-full h-auto rounded-lg shadow-lg"
+                            height={400}
+                            src="/tr5.jpg"
+                            style={{
+                              aspectRatio: "600/700",
+                            }}
+                            width={600}
+                          />
+                        </CarouselItem>
+                        <CarouselItem>
+                          <Image
+                            alt="Nosotros"
+                            className="w-full h-auto rounded-lg shadow-lg"
+                            height={400}
+                            src="/tr6.jpg"
+                            style={{
+                              aspectRatio: "600/700",
+                            }}
+                            width={600}
+                          />
+                        </CarouselItem>
+                        <CarouselItem>
+                          <Image
+                            alt="Nosotros"
+                            className="w-full h-auto rounded-lg shadow-lg"
+                            height={400}
+                            src="/tr7.jpg"
+                            style={{
+                              aspectRatio: "600/700",
+                            }}
+                            width={600}
+                          />
+                        </CarouselItem>
                       </CarouselContent>
                     }
                   </Carousel>

@@ -6,14 +6,14 @@ import StarIcon from "@/components/icons/Star"; // Importa el StarIcon desde la 
 const Reviews = () => {
   const reviews = [
     {
-      name: "Abril Constantini",
-      text: "Walter es increíble, lo llame y a los 15 minutos estaba en mi casa. Se me quedó la llave del auto adentro, el auto cerrado, en 1 minuto la sacó. Lo recomiendo mil veces!! Gracias genio!",
+      name: "Rocío Muñiz",
+      text: "Excelente servicio. Respondió rápido el mensaje, y acudió rápido al domicilio. Realizó sin problema la apertura de la puerta. Recomendado👌🏻...",
       rating: 5,
     },
     {
-      name: "Mayra Celem",
-      text: "Muy buen servicio y muy rápido no se demoró nada en llega... En menos de 3 minutos soluciono el problema... Super recomendado.. y muy amable..",
-      rating: 4,
+      name: "Cristy Brito",
+      text: "Excelente servicio, respondió rápido a la urgencia. Y lo soluciono a la perfección, a demás, super correcto, educado y amable. Totalmente recomendable. Gracias por ayudarnos!!!",
+      rating: 5,
     },
     {
       name: "Gabriela Aguilera",
