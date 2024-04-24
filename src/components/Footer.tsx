@@ -26,8 +26,7 @@ export default function Footer() {
           className="my-6 inline-flex h-10 items-center justify-center rounded-md bg-yellow-300 dark:bg-yellow-400 p-4 text-sm font-medium text-gray-800 dark:text-gray-800 shadow gap-2 transition-colors hover:bg-gray-800/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:hover:bg-gray-50/90 dark:hover:text-gray-800 dark:focus-visible:ring-gray-300"
           onClick={handlePhoneClick}
         >
-          <SmartphoneIcone />
-          Llámanos ahora
+          <SmartphoneIcone /> Llámanos al {phoneNumber}
         </button>
       </div>
       <div className="flex gap-2 py-6 shrink-0 px-4">
