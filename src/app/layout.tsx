@@ -63,7 +63,7 @@ export default function RootLayout({
         <meta name="description" content={description} />
         <link rel="icon" href={iconHref} />
         {/* Meta etiqueta de verificación de Google Search Console */}
-        <meta name="google-site-verification" content="TU_CONTENIDO_AQUÍ" />
+        <meta name="google-site-verification" content="7WWgxFhVNpCczm1PL-D2RyxEWwT5kp0cf_TfA2AjwWA" />
       </Head>
       {/* Google Analytics */}
       <Script
