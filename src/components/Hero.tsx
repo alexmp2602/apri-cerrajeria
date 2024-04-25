@@ -5,7 +5,7 @@ import SmartphoneIcone from "./icons/Smartphone";
 
 export default function Hero() {
   const handleContactClick = () => {
-    const phoneNumber = "+542615188484";
+    const phoneNumber = "+5492615188484";
     window.open(`tel:${phoneNumber}`);
   };
 

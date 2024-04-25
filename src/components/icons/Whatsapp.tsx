@@ -9,7 +9,7 @@ interface WhatsappIconProps extends React.SVGProps<SVGSVGElement> {
 const WhatsappIcon: React.FC<WhatsappIconProps> = ({ className, ...rest }) => {
   const handleWhatsAppClick = (e: React.MouseEvent<SVGSVGElement> | React.TouchEvent<SVGSVGElement>) => {
     e.preventDefault();
-    const whatsappUrl = 'https://wa.me/+542615188484?text=¡Hola!%20Me%20gustaría%20saber%20más%20sobre%20sus%20servicios.';
+    const whatsappUrl = 'https://wa.me/+5492615188484?text=¡Hola!%20Me%20gustaría%20saber%20más%20sobre%20sus%20servicios.';
     window.open(whatsappUrl, '_blank');
   };
 

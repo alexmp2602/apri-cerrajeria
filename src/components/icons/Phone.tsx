@@ -11,7 +11,7 @@ const CallIcon: React.FC<CallIconProps> = ({ className, ...rest }) => {
     e: React.MouseEvent<SVGSVGElement> | React.TouchEvent<SVGSVGElement>
   ) => {
     e.preventDefault();
-    const callUrl = "tel:+542615188484";
+    const callUrl = "tel:+5492615188484";
     window.open(callUrl, "_self");
   };
 

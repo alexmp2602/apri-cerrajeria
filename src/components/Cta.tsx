@@ -5,7 +5,7 @@ import WhatsappIcon from "./icons/Whatsapp";
 export default function Cta() {
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    const whatsappUrl = "https://wa.me/+542615188484?text=¡Hola!%20Me%20gustaría%20saber%20más%20sobre%20sus%20servicios.";
+    const whatsappUrl = "https://wa.me/+5492615188484?text=¡Hola!%20Me%20gustaría%20saber%20más%20sobre%20sus%20servicios.";
     window.open(whatsappUrl, "_blank");
   };
 
