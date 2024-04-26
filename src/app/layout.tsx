@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
+import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const roboto = Roboto({
   weight: ["400", "700"],
@@ -26,22 +27,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-J3WS1ZH3J6"
-        ></Script>
-        <Script id="google-analytics">
-          {`
-   window.dataLayer = window.dataLayer || [];
-   function gtag(){dataLayer.push(arguments);}
-   gtag('js', new Date());
- 
-   gtag('config', 'G-J3WS1ZH3J6');
-  `}
-        </Script>
-      </head>
-      <body className={roboto.className}>{children}</body>
+      <body className={roboto.className}>
+        <main>{children}</main>
+        <GoogleAnalytics gaId="G-J3WS1ZH3J6" />
+        <GoogleTagManager gtmId="GTM-5VF3JZN2" />
+      </body>
     </html>
   );
 }
