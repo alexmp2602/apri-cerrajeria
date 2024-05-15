@@ -26,7 +26,7 @@ export default function Home() {
       <Footer />
       <div className="fixed bottom-4 right-4 md:right-4 flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
         <Link
-          href="https://wa.me/+5492615188484?text=¡Hola!%20Me%20gustaría%20saber%20más%20sobre%20sus%20servicios."
+          href="https://wa.me/+5492615188484?text=Hola!%20Estuve%20mirando%20tu%20sitio%20web%20y%20quiero%20hacerte%20una%20consulta."
           className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-600 text-white shadow-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-800"
         >
           <WhatsappIcon className="h-6 w-6" />
