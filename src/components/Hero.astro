@@ -1,0 +1,114 @@
+---
+import IconWhatsapp from "./icons/IconWhatsapp.astro";
+import IconPhone from "./icons/IconPhone.astro";
+---
+
+<section
+  id="inicio"
+  class="relative min-h-[90vh] flex items-center justify-center bg-fingerprint text-white text-center px-6 py-20 overflow-hidden"
+>
+  <div
+    class="relative z-10 max-w-2xl w-full flex flex-col items-center gap-4 sm:gap-6 animate-fade-in"
+  >
+    <!-- Logo -->
+    <img
+      src="img/APRI_sin_fondo.png"
+      alt="Logo Cerrajería APRI 24hs"
+      class="w-44 sm:w-52 rounded-2xl transition-all duration-500 hover:scale-105"
+      loading="lazy"
+    />
+
+    <!-- Título -->
+    <h1 class="text-2xl sm:text-5xl font-bold tracking-normal leading-tight">
+      Cerrajería APRI 24hs
+    </h1>
+
+    <!-- Subtítulo -->
+    <p class="text-sm sm:text-xl font-medium text-white/80 leading-relaxed">
+      Soluciones en&nbsp;
+      <span id="typed" class="font-bold text-yellow-400"></span>
+    </p>
+
+    <!-- Botones -->
+    <div class="flex flex-col sm:flex-row gap-4 mt-2">
+      <a
+        href="tel:+5492615188484"
+        class="inline-flex items-center justify-center gap-2 bg-blue-600 text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-blue-700 hover:scale-105 transition-all"
+      >
+        <IconPhone />
+        Llamar
+      </a>
+
+      <a
+        href="https://wa.me/5492615188484?text=Hola%20Cerrajería%20APRI%2C%20necesito%20ayuda%20urgente"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hidden md:inline-flex items-center justify-center gap-2 bg-green-600 text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-green-700 hover:scale-105 transition-all"
+      >
+        <IconWhatsapp />
+        WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <!-- Flecha scroll -->
+  <div
+    class="hidden md:block absolute bottom-2 left-1/2 transform -translate-x-1/2 animate-bounce text-white/60"
+    aria-label="Desplazarse hacia abajo"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-6 w-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </div>
+
+  <!-- Efecto de tipeo -->
+  <script {...{ "is:global": true }}>
+    const palabras = [
+      "aperturas de puertas",
+      "copias de llaves",
+      "destrabes urgentes",
+      "instalación de cerraduras",
+      "urgencias 24 horas",
+    ];
+    let i = 0;
+    const el = document.getElementById("typed");
+
+    function escribir() {
+      let palabra = palabras[i];
+      let j = 0;
+      el.textContent = "";
+      const intervalo = setInterval(() => {
+        el.textContent += palabra[j++];
+        if (j === palabra.length) {
+          clearInterval(intervalo);
+          setTimeout(borrar, 2000);
+        }
+      }, 80);
+    }
+
+    function borrar() {
+      const palabra = el.textContent;
+      let j = palabra.length;
+      const intervalo = setInterval(() => {
+        el.textContent = palabra.substring(0, --j);
+        if (j === 0) {
+          clearInterval(intervalo);
+          i = (i + 1) % palabras.length;
+          setTimeout(escribir, 500);
+        }
+      }, 40);
+    }
+
+    document.addEventListener("DOMContentLoaded", escribir);
+  </script>
+</section>

@@ -1,0 +1,115 @@
+<section id="servicios" class="bg-transparent text-white p-6 pb-12 lg:py-20">
+  <div class="max-w-6xl mx-auto">
+    <!-- Título -->
+    <h2
+      class="text-2xl md:text-4xl font-bold text-center mb-12 opacity-0 translate-y-4 duration-700 ease-out"
+      data-reveal
+    >
+      Nuestros Servicios
+    </h2>
+
+    <!-- Grilla de servicios -->
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Servicio individual -->
+      {
+        [
+          {
+            img: "img/ap_casa-fill.jpg",
+            alt: "Apertura de casas",
+            title: "Apertura de casas",
+            text: "Servicio rápido y profesional para cuando olvidás las llaves o se rompe la cerradura.",
+            link: "https://wa.me/5492615188484?text=Hola%20APRI%2C%20necesito%20ayuda%20con%20la%20apertura%20de%20mi%20casa.",
+          },
+          {
+            img: "img/ap_auto-fill.jpg",
+            alt: "Apertura de autos",
+            title: "Apertura de autos",
+            text: "Abrimos tu vehículo sin dañar la cerradura. Atención 24 hs.",
+            link: "https://wa.me/5492615188484?text=Hola%20APRI%2C%20necesito%20ayuda%20con%20la%20apertura%20de%20mi%20auto.",
+          },
+          {
+            img: "img/destrabe-fill.jpg",
+            alt: "Destrabe de cerraduras",
+            title: "Destrabe de cerraduras",
+            text: "Solucionamos problemas de cerraduras trabadas en el momento.",
+            link: "https://wa.me/5492615188484?text=Hola%20APRI%2C%20necesito%20ayuda%20con%20una%20cerradura%20trabada.",
+          },
+          {
+            img: "img/cambio_combinacion.jpg",
+            alt: "Cambio de combinación",
+            title: "Cambio de combinación",
+            text: "Actualizá la seguridad de tu caja fuerte o cerradura sin reemplazarla.",
+            link: "https://wa.me/5492615188484?text=Hola%20APRI%2C%20quiero%20hacer%20un%20cambio%20de%20combinación%20en%20una%20cerradura%20o%20caja%20fuerte.",
+          },
+          {
+            img: "img/cerradura_inteligente.jpg",
+            alt: "Cerraduras Inteligentes",
+            title: "Cerraduras Inteligentes",
+            text: "Instalación y configuración de cerraduras digitales y sistemas smart.",
+            link: "https://wa.me/5492615188484?text=Hola%20APRI%2C%20me%20gustaría%20instalar%20una%20cerradura%20inteligente%20en%20mi%20hogar%20o%20comercio.",
+          },
+          {
+            img: "img/copias_llaves.jpg",
+            alt: "Copias de llaves",
+            title: "Copias de llaves",
+            text: "Hacemos duplicados de llaves al instante, con precisión y calidad.",
+            link: "https://wa.me/5492615188484?text=Hola%20APRI%2C%20necesito%20hacer%20una%20copia%20de%20llave.",
+          },
+        ].map((s, i) => (
+          <div
+            class="group bg-[#1f1f1f] rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow opacity-0 translate-y-8 duration-700 ease-out"
+            data-reveal
+            data-reveal-delay={100 * (i + 1)}
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src={s.img}
+                alt={s.alt}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-yellow-400 mb-2">
+                {s.title}
+              </h3>
+              <p class="text-sm text-white/80 leading-relaxed">{s.text}</p>
+              <a
+                href={s.link}
+                target="_blank"
+                class="inline-block mt-4 text-sm font-medium text-white bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg transition"
+              >
+                Solicitar servicio
+              </a>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  <!-- Script Reveal -->
+  <script {...{ "is:global": true }}>
+    document.addEventListener("DOMContentLoaded", () => {
+      const revealItems = document.querySelectorAll("[data-reveal]");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const el = entry.target;
+              const delay = parseInt(el.getAttribute("data-reveal-delay")) || 0;
+              setTimeout(() => {
+                el.classList.remove("opacity-0", "translate-y-8");
+                el.classList.add("opacity-100", "translate-y-0");
+              }, delay);
+              observer.unobserve(el);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      revealItems.forEach((item) => observer.observe(item));
+    });
+  </script>
+</section>

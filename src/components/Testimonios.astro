@@ -1,0 +1,61 @@
+---
+import IconQuote from "./icons/IconQuote.astro";
+
+const testimonios = [
+  {
+    nombre: "Rocío Muñiz",
+    texto: "Respondió rápido el mensaje y acudió enseguida. Recomendado 👌🏻",
+  },
+  {
+    nombre: "Cristy Brito",
+    texto:
+      "Solucionó a la perfección una urgencia. Educado, amable y recomendable.",
+  },
+  {
+    nombre: "Gabriela Aguilera",
+    texto:
+      "Un feriado a las 2 AM llegó puntual y en 5 minutos resolvió todo 👏",
+  },
+  {
+    nombre: "Icaro Bicalho",
+    texto: "Excelente profesional. En menos de 1 minuto solucionó el problema.",
+  },
+  {
+    nombre: "Alberto Alonso",
+    texto: "Muy buena atención. ¡Me salvó las papas con el auto a medianoche!",
+  },
+];
+---
+
+<section id="testimonios" class="bg-[#121212] text-white p-6 pb-12 lg:py-20">
+  <div class="max-w-6xl mx-auto text-center space-y-12">
+    <!-- Título -->
+    <div>
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+        Lo que dicen nuestros clientes
+      </h2>
+      <p class="text-white/70 text-lg max-w-2xl mx-auto">
+        Valoramos cada experiencia. Estas son algunas opiniones reales de
+        quienes confiaron en APRI.
+      </p>
+    </div>
+
+    <!-- Grilla de testimonios -->
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        testimonios.map(({ nombre, texto }, index) => (
+          <div
+            class="bg-[#1f1f1f] rounded-xl p-6 shadow-md space-y-4 transition-transform hover:-translate-y-1 hover:shadow-lg"
+            style={`animation-delay: ${index * 100}ms`}
+          >
+            <IconQuote class="w-6 h-6 text-yellow-400" />
+            <p class="text-white/80 text-sm italic">“{texto}”</p>
+            <div class="text-sm text-white/60 pt-4 border-t border-white/10">
+              {nombre}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

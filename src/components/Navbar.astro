@@ -1,0 +1,93 @@
+---
+import IconWhatsapp from "./icons/IconWhatsapp.astro";
+---
+
+<nav class="sticky top-0 z-50 bg-[#121212] text-white shadow-md">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="#inicio" class="flex items-center gap-2">
+        <img
+          src="img/APRI_sin_fondo.png"
+          alt="Logo APRI"
+          class="h-10 w-auto rounded-md"
+        />
+        <span class="hidden sm:inline text-lg font-bold tracking-wide"
+          >Cerrajería APRI</span
+        >
+      </a>
+
+      <!-- Menú desktop -->
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="#servicios" class="hover:text-yellow-400 transition"
+          >Servicios</a
+        >
+        <a href="#porque-elegirnos" class="hover:text-yellow-400 transition"
+          >¿Por qué elegirnos?</a
+        >
+        <a href="#contacto" class="hover:text-yellow-400 transition">Contacto</a
+        >
+        <a
+          href="https://wa.me/5492615188484?text=Hola%20APRI%2C%20necesito%20ayuda"
+          target="_blank"
+          class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition"
+        >
+          <IconWhatsapp /> WhatsApp
+        </a>
+      </div>
+
+      <!-- Botón móvil -->
+      <div class="md:hidden">
+        <button
+          id="menu-toggle"
+          class="focus:outline-none"
+          aria-label="Abrir menú"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 8h16M4 16h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menú desplegable mobile -->
+  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+    <a href="#servicios" class="block py-2 text-sm hover:text-yellow-400"
+      >Servicios</a
+    >
+    <a href="#porque-elegirnos" class="block py-2 text-sm hover:text-yellow-400"
+      >¿Por qué elegirnos?</a
+    >
+    <a href="#contacto" class="block py-2 text-sm hover:text-yellow-400"
+      >Contacto</a
+    >
+    <a
+      href="https://wa.me/5492615188484?text=Hola%20APRI%2C%20necesito%20ayuda"
+      target="_blank"
+      class="block mt-2 text-sm text-green-400 font-medium"
+    >
+      WhatsApp
+    </a>
+  </div>
+
+  <!-- Script menú móvil -->
+  <script {...{ "is:global": true }}>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("mobile-menu");
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    });
+  </script>
+</nav>
