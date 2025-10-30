@@ -1,40 +1,21 @@
 ---
 import "../styles/global.css";
-const { title } = Astro.props;
 import IconWhatsapp from "../components/icons/IconWhatsapp.astro";
+
+const { title = "Cerrajería APRI 24hs | Mendoza", description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Fuente moderna: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Favicon y Mobile -->
-    <link
-      rel="icon"
-      href="https://www.cerrajeriaapri24hs.com.ar/icons/icon_512x512_transparente.png"
-      type="image/x-icon"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="https://www.cerrajeriaapri24hs.com.ar/icons/icon_512x512_transparente.png"
-    />
-    <link rel="manifest" href="/site.webmanifest" />
-
-    <!-- SEO Básico -->
+    <!-- META -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta
       name="description"
-      content="Cerrajería APRI brinda atención urgente las 24hs en Mendoza y alrededores. Aperturas, cambio de cerraduras y copias de llaves."
+      content={description ||
+        "Cerrajería APRI brinda atención urgente las 24hs en Mendoza y alrededores. Aperturas, cambio de cerraduras y copias de llaves."}
     />
     <meta
       name="keywords"
@@ -42,8 +23,28 @@ import IconWhatsapp from "../components/icons/IconWhatsapp.astro";
     />
     <meta name="author" content="Cerrajería APRI" />
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Cerrajería APRI 24hs | Mendoza" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FAVICON -->
+    <link
+      rel="icon"
+      href="https://www.cerrajeriaapri24hs.com.ar/icons/icon_512x512_transparente.png"
+      type="image/png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://www.cerrajeriaapri24hs.com.ar/icons/icon_512x512_transparente.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content={title} />
     <meta
       property="og:description"
       content="Servicio de cerrajería urgente 24 horas en Mendoza. Rápido, profesional y confiable."
@@ -58,9 +59,9 @@ import IconWhatsapp from "../components/icons/IconWhatsapp.astro";
     <meta property="og:locale" content="es_AR" />
     <meta property="og:url" content="https://www.cerrajeriaapri24hs.com.ar" />
 
-    <!-- Twitter Cards -->
+    <!-- TWITTER -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Cerrajería APRI 24hs | Mendoza" />
+    <meta name="twitter:title" content={title} />
     <meta
       name="twitter:description"
       content="Servicio de cerrajería urgente 24 horas en Mendoza."
@@ -70,7 +71,7 @@ import IconWhatsapp from "../components/icons/IconWhatsapp.astro";
       content="https://www.cerrajeriaapri24hs.com.ar/icons/apri.jpg"
     />
 
-    <!-- Schema.org JSON-LD -->
+    <!-- SCHEMA -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -96,25 +97,40 @@ import IconWhatsapp from "../components/icons/IconWhatsapp.astro";
       }
     </script>
 
-    <!-- ✅ Google Tag Manager (HEAD) -->
-    <script
-      set:html="(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MPDB2ZFK');"
-    />
-    <!-- ✅ Fin Google Tag Manager (HEAD) -->
+    <!-- ✅ GOOGLE TAG MANAGER (HEAD) -->
+    <!-- eslint-disable -->
+    <script>
+      // @ts-nocheck
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-MPDBZZFK");
+    </script>
+    <!-- ✅ END GTM -->
   </head>
 
   <body class="bg-[#121212] text-white font-sans antialiased relative">
-    <!-- ✅ Google Tag Manager (noscript) -->
-    <noscript
-      set:html="<iframe src='https://www.googletagmanager.com/ns.html?id=GTM-MPDB2ZFK' height='0' width='0' style='display:none;visibility:hidden'></iframe>"
-    />
-    <!-- ✅ Fin Google Tag Manager (noscript) -->
+    <!-- ✅ GOOGLE TAG MANAGER (NOSCRIPT) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MPDBZZFK"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- ✅ END GTM -->
 
     <main>
       <slot />
     </main>
 
-    <!-- Botón flotante de WhatsApp -->
+    <!-- BOTÓN DE WHATSAPP -->
     <a
       href="https://wa.me/5492615188484"
       target="_blank"
