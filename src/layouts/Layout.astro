@@ -28,10 +28,7 @@ import IconWhatsapp from "../components/icons/IconWhatsapp.astro";
       rel="apple-touch-icon"
       href="https://www.cerrajeriaapri24hs.com.ar/icons/icon_512x512_transparente.png"
     />
-    <link
-      rel="manifest"
-      href="/site.webmanifest"
-    />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <!-- SEO Básico -->
     <title>{title}</title>
@@ -45,7 +42,7 @@ import IconWhatsapp from "../components/icons/IconWhatsapp.astro";
     />
     <meta name="author" content="Cerrajería APRI" />
 
-    <!-- Open Graph (para WhatsApp, Facebook, etc.) -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Cerrajería APRI 24hs | Mendoza" />
     <meta
       property="og:description"
@@ -61,7 +58,7 @@ import IconWhatsapp from "../components/icons/IconWhatsapp.astro";
     <meta property="og:locale" content="es_AR" />
     <meta property="og:url" content="https://www.cerrajeriaapri24hs.com.ar" />
 
-    <!-- Twitter Cards (opcional) -->
+    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Cerrajería APRI 24hs | Mendoza" />
     <meta
@@ -73,7 +70,7 @@ import IconWhatsapp from "../components/icons/IconWhatsapp.astro";
       content="https://www.cerrajeriaapri24hs.com.ar/icons/apri.jpg"
     />
 
-    <!-- Schema.org JSON-LD para SEO local -->
+    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -99,7 +96,7 @@ import IconWhatsapp from "../components/icons/IconWhatsapp.astro";
       }
     </script>
 
-    <!-- Google Tag Manager -->
+    <!-- ✅ Google Tag Manager (HEAD) -->
     <script is:inline>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
@@ -110,31 +107,21 @@ import IconWhatsapp from "../components/icons/IconWhatsapp.astro";
         j.async = true;
         j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
         f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-5VF3JZN2");
+      })(window, document, "script", "dataLayer", "GTM-MPDB2ZFK");
     </script>
-
-    <!-- Google Analytics (GA4) -->
-    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-J3WS1ZH3J6"
-    ></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-J3WS1ZH3J6");
-    </script>
+    <!-- ✅ Fin Google Tag Manager (HEAD) -->
   </head>
 
   <body class="bg-[#121212] text-white font-sans antialiased relative">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-5VF3JZN2"
+    <!-- ✅ Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MPDB2ZFK"
         height="0"
         width="0"
-        style="display:none;visibility:hidden"></iframe>
-    </noscript>
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <!-- ✅ Fin Google Tag Manager (noscript) -->
 
     <main>
       <slot />
